@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- dashboard css link start-->
+     <link rel="stylesheet" href="../Dashboard/css/dashboard.css">
+     <!-- dashboard css link end-->
+
+    <!--Bootstrap css start-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+     <!--Bootstrap css end-->
+
+     <!--cdnjs font link start-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
+     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!--cdnjs font link end-->
+
+     <!-- SweetAlert2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.min.css" rel="stylesheet">
+     <!--sweetAlert2 css end -->
+</head>
+<body>
+     
+    <div class="toggler-box">
+       <!-- <i class="fa-solid fa-bars toggler-icon d-none"></i> -->
+        <i class="fa-solid fa-bars toggler-icon"></i>
+        <i class="fa-solid fa-rectangle-xmark toggler-icon d-none"></i>
+    </div>
+
+     <div class="side-nav">
+        <div class="profile-pic"></div>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <i class="fa fa-home"></i> Home
+            </li>
+            <li class="list-group-item">
+                <i class="fa fa-home"></i> Home
+            </li>
+            <li class="list-group-item">
+                <i class="fa fa-home"></i> Home
+            </li>
+            <li class="list-group-item">
+                <i class="fa fa-home"></i> Home
+            </li>
+            <li class="list-group-item">
+                <i class="fa fa-home"></i> Home
+            </li>
+        </ul>
+        <button id="logout-btn">Log Out</button>
+     </div>
+
+
+     <div class="container-fluid overflow-hidden p-5 main-box">
+        <div class="row">
+            <div class="col-md-0 col-lg-2 "></div>
+            <div class="col-md-12 col-lg-10 p-0">
+
+            <ul class="list-group">
+                <li class="list-group-item" style="background-color: rgb(10, 10, 84); color: white; padding: 10px; border-radius: 10px;">
+                    <h1 id="brand-name">Welcome:jjjjjjjjj</h1>
+                </li>
+            </ul>
+
+           
+            <div class="row mt-3" >
+                <div class="col-md-4 teacher-box text-center">
+                    <ul class="list-group">
+                        <li class="list-group-item" style="background-color:#8a39a7;color: white;">
+                            <h4>Teachers</h4>
+                        </li>
+                    </ul>
+                    <div class="content-box">
+                        <div class="number-box">
+                            <h5>100</h5>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-md-4 teacher-box text-center">
+                    <ul class="list-group ">
+                        <li class="list-group-item" style="background-color:#8a39a7;color: white;">
+                            <h4>Students</h4>
+                        </li>
+                    </ul>
+                    <div class="content-box">
+                        <div class="number-box">
+                            <h5>100</h5>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-md-4 teacher-box text-center">
+                    <ul class="list-group ">
+                        <li class="list-group-item" style="background-color:#8a39a7;color: white;">
+                            <h4>Subjects</h4>
+                        </li>
+                    </ul>
+                    <div class="content-box">
+                        <div class="number-box">
+                            <h5>100</h5>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="row mt-2">
+
+                <!--start-->
+                <div class="col-md-4">
+                    <ul class="list-group">
+                     <li class="list-group-item text-center" style="background-color: #0A0A54; color: white; border-radius: 10px;">
+                        <h3> Create Subject</h3>
+                     </li>  
+                    </ul>
+                    <div class="accordion">
+                        <div class="accordion-item">
+                           <h2 class="accordion-header">
+                            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#show-subject"><!--show-->
+                                Create Subject
+                            </button>
+                           </h2> 
+                           <div class="accordion-collapse collapse" id="show-subject"><!--removed show-->
+                             <div class="accordion-body">
+                                
+                             </div>
+                           </div>
+                           <form>
+                            <input type="text" placeholder="Subject Name" class="form-control subject mb-3">
+                           <div align="end">
+                            <button class="btn text-white subject-btn" style="background-color:#539749 ;">Store Subject</button>
+                           </div>
+                        </form>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="col-md-8">
+                    <ul class="list-group">
+                        <li class="list-group-item text-center" style="background-color: #0A0A54; color: white; border-radius: 10px;">
+                           <h3> Create Subject Related Questions</h3>
+                        </li>  
+                       </ul>
+                       <div class="accordion">
+                        <div class="accordion-item">
+                           <h2 class="accordion-header">
+                            <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#create-question">
+                                Create Questions
+                            </button>
+                           </h2> 
+                           <div class="accordion-collapse collapse" id="create-question"> <!--removed show-->
+                             <div class="accordion-body">
+                                <form class="question-form">
+                                    <select name="" id="choose-subject" class="form-select mb-3">
+                                      <option value="choose subject">Choose Subject</option>  
+                                    </select>
+                                    <label for="question">1 write your question here !</label>
+                                    <input type="text" required class="form-control subject mb-3" id="question">
+                                    <label for="option-one">Option-1</label>
+                                    <input type="text" required class="form-control subject mb-3" id="option-one">
+                                    <label for="option-two">Option-2</label>
+                                    <input type="text" required class="form-control subject mb-3" id="option-two">
+                                    <label for="option-three">Option-4</label>
+                                    <input type="text" required class="form-control subject mb-3" id="option-three">
+                                    <label for="option-four">Option-4</label>
+                                    <input type="text" required class="form-control subject mb-3" id="option-four">
+                                    <label for="correct-answer">Correct Answer</label>
+                                    <input type="text" required class="form-control subject mb-3" id="Correct Answer">
+                                   <div align="end">
+                                    <button class="btn text-white" type="submit" style="background-color:#539749;">Store Subject</button>
+                                   </div>
+                                </form>
+                             </div>
+                           </div>
+                        </div>
+                    </div>
+                 </div>
+               </div>
+               <div class="row mt-2">
+                <div class="col-md-4">
+                   <ul class="list-group">
+                    <li class="list-group-item text-center" style="background-color: #0A0A54; color:white;">
+                       <h3> Show Subject</h3>
+                    </li>  
+                   </ul>
+                   <div class="accordion">
+                       <div class="accordion-item">
+                          <h2 class="accordion-header">
+                           <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#create-subject"><!--create-->
+                               Update & Delete Subject
+                           </button>
+                          </h2> 
+                          <div class="accordion-collapse collapse " id="create-subject"> <!--create-->
+                            <div class="accordion-body">
+                                <div class="visible-subject">
+                                    
+                                   </div>
+                               <form>
+                                   <input type="text" placeholder="Subject Name" class="form-control subject mb-3">
+                                  <div align="end">
+                                   <button class="btn text-white subject-btn" style="background-color:#539749 ;">Store Subject</button>
+                                  </div>
+                               </form>
+                            </div>
+                          </div>
+                       </div>
+                   </div>
+                </div>
+                <div class="col-md-8">
+                   <ul class="list-group">
+                       <li class="list-group-item text-center" style="background-color: #0A0A54;color: white;">
+                          <h3>Update & Delete Question</h3>
+                       </li>  
+                      </ul>
+                      <div class="accordion">
+                       <div class="accordion-item">
+                          <h2 class="accordion-header">
+                           <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#show-question">
+                               Update & Delete Question
+                           </button>
+                          </h2> 
+                          <div class="accordion-collapse collapse" id="show-question">
+                            <div class="accordion-body">
+                                <select name="" id="select-subject" class="form-select mb-3">
+                                    <option value="choose subject">Choose Subject</option>  
+                                  </select>
+
+                                  <div class="visible-question">
+                                 <!--   <div class="mb-3">
+                                        <div class="d-flex justify-content-between">
+                                            <h4>what is your name?</h4>
+                                            <br>
+                                            <div>
+                                                <i class="fa fa-edit mx-2" ></i>
+
+                                                </i>
+                                                <i class="fa fa-save mx-2"></i>
+
+                                                </i>
+                                                <i class="fa fa-trash mx-2"></i>
+
+                                                </i>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div>
+                                             <span>1. option-1</span>
+                                             <br><br>
+                                             <span>1. option-2</span>
+                                             <br><br>
+                                             <span>1. option-3</span>
+                                             <br><br>
+                                             <span>1. option-4</span>
+                                             <br><br>
+                                             <span class="bg-info p-2 text-white">Correct answer</span>
+                                             <br><br>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between">
+                                            <h4>what is your name?</h4>
+                                            <br>
+                                            <div>
+                                                <i class="fa fa-edit mx-2" ></i>
+
+                                                </i>
+                                                <i class="fa fa-save mx-2"></i>
+
+                                                </i>
+                                                <i class="fa fa-trash mx-2"></i>
+
+                                                </i>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div>
+                                             <span>1. option-1</span>
+                                             <br><br>
+                                             <span>1. option-2</span>
+                                             <br><br>
+                                             <span>1. option-3</span>
+                                             <br><br>
+                                             <span>1. option-4</span>
+                                             <br><br>
+                                             <span class="bg-info p-2 text-white">Correct answer</span>
+                                             <br><br>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between">
+                                            <h4>what is your name?</h4>
+                                            <br>
+                                            <div>
+                                                <i class="fa fa-edit mx-2" ></i>
+
+                                                </i>
+                                                <i class="fa fa-save mx-2"></i>
+
+                                                </i>
+                                                <i class="fa fa-trash mx-2"></i>
+
+                                                </i>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div>
+                                             <span>1. option-1</span>
+                                             <br><br>
+                                             <span>1. option-2</span>
+                                             <br><br>
+                                             <span>1. option-3</span>
+                                             <br><br>
+                                             <span>1. option-4</span>
+                                             <br><br>
+                                             <span class="bg-info p-2 text-white">Correct answer</span>
+                                             <br><br>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between">
+                                            <h4>what is your name?</h4>
+                                            <br>
+                                            <div>
+                                                <i class="fa fa-edit mx-2" ></i>
+
+                                                </i>
+                                                <i class="fa fa-save mx-2"></i>
+
+                                                </i>
+                                                <i class="fa fa-trash mx-2"></i>
+
+                                                </i>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div>
+                                             <span>1. option-1</span>
+                                             <br><br>
+                                             <span>1. option-2</span>
+                                             <br><br>
+                                             <span>1. option-3</span>
+                                             <br><br>
+                                             <span>1. option-4</span>
+                                             <br><br>
+                                             <span class="bg-info p-2 text-white">Correct answer</span>
+                                             <br><br>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between">
+                                            <h4>what is your name?</h4>
+                                            <br>
+                                            <div>
+                                                <i class="fa fa-edit mx-2" ></i>
+
+                                                </i>
+                                                <i class="fa fa-save mx-2"></i>
+
+                                                </i>
+                                                <i class="fa fa-trash mx-2"></i>
+
+                                                </i>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div>
+                                             <span>1. option-1</span>
+                                             <br><br>
+                                             <span>1. option-2</span>
+                                             <br><br>
+                                             <span>1. option-3</span>
+                                             <br><br>
+                                             <span>1. option-4</span>
+                                             <br><br>
+                                             <span class="bg-info p-2 text-white">Correct answer</span>
+                                             <br><br>
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <div class="d-flex justify-content-between">
+                                            <h4>what is your name?</h4>
+                                            <br>
+                                            <div>
+                                                <i class="fa fa-edit mx-2" ></i>
+
+                                                </i>
+                                                <i class="fa fa-save mx-2"></i>
+
+                                                </i>
+                                                <i class="fa fa-trash mx-2"></i>
+
+                                                </i>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div>
+                                             <span>1. option-1</span>
+                                             <br><br>
+                                             <span>1. option-2</span>
+                                             <br><br>
+                                             <span>1. option-3</span>
+                                             <br><br>
+                                             <span>1. option-4</span>
+                                             <br><br>
+                                             <span class="bg-info p-2 text-white">Correct answer</span>
+                                             <br><br>
+                                        </div>
+                                    </div>
+                                       -->
+
+                                  </div>
+                            </div>
+                          </div>
+                       </div>
+                   </div>
+                <!--end-->
+                
+            </div>
+        </div>
+
+        <div class="row mt-2">
+           
+            <div class="col-md-12 ">
+               <ul class="list-group">
+                   <li class="list-group-item text-center" style="background-color: #0A0A54;color: white;">
+                      <h3>Student & Teacher Registration Form</h3>
+                   </li>  
+                  </ul>
+                  <div class="accordion">
+                   <div class="accordion-item">
+                      <h2 class="accordion-header">
+                       <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#registration-form">
+                           Registration Form
+                       </button>
+                      </h2> 
+                      <div class="accordion-collapse collapse" id="registration-form">
+                        <div class="accordion-body">
+                            
+                            <!--start form-->
+                            <form class="registration-form">
+                                <div class="row">
+                                    <div class="col-md-6">
+
+                                        <label for="name">Name</label>
+                                        <input type="text" required id="name" class="form-control mb-3">
+
+                                        <label for="ID">ID</label>
+                                        <input type="text" required id="id" class="form-control mb-3">
+
+                                        <label for="dob">DOB</label>
+                                        <input type="date" required id="dob" class="form-control mb-3">
+
+                                        <label for="choose-type"></label>
+                                        <select required name=""  id="choose-type" class="form-select mb-3">
+                                            <option value="choose type">Choose Type</option>
+                                            <option value="teacher">Teacher</option>
+                                            <option value="student">Student</option>
+                                        </select>
+
+                                        <div align="end">
+                                            <button class="btn bg-info text-white">Register</button>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="col-md-6">
+
+                                        <label for="mobile">Mobile</label>
+                                        <input type="text" required id="mobile" class="form-control mb-3">
+
+                                        <label for="email">Email</label>
+                                        <input type="email" required id="email" class="form-control mb-3">
+
+                                        <label for="password">Password</label>
+                                        <input type="password" required id="password" class="form-control mb-3">
+
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                      </div>
+                   </div>
+               </div>
+            <!--end-->
+            
+        </div>
+    </div>
+    <!--end-->
+
+    <!--footer start-->
+    <div class="row mt-2">
+           
+        <div class="col-md-12 ">
+           <ul class="list-group">
+               <li class="list-group-item text-center" style="background-color: #0A0A54;color: white;">
+                  <h3>Student & Teacher Data</h3>
+               </li>  
+              </ul>
+              <div class="accordion">
+               <div class="accordion-item">
+                  <h2 class="accordion-header">
+                   <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#registration-form">
+                       User Data
+                   </button>
+                  </h2> 
+                  <div class="accordion-collapse collapse" id="registration-form">
+                    <div class="accordion-body" style="overflow-x: scroll;">
+                        
+                        <!--start table-->
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Profile</th>                                   
+                                    <th>Name</th>
+                                    <th>ID</th>
+                                    <th>DOB</th>
+                                    <th>Type</th>
+                                    <th>Mobile</th>
+                                    <th>Email</th>
+                                    <th>Password</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody class="registration-data">
+                                <tr>
+                                    <th scope="row">${index+1}</th>
+                                    <td>
+                                        <div class="profile">
+                                            <img src="../Dashboard/images/profile-pic2.png" width="35px" height="35px" alt="">
+                                        </div>
+                                        <td class="text-nowrap" style="width: 8rem;">${allData.name}</td>
+                                        <td class="text-nowrap" style="width: 8rem;">${allData.id}</td>
+                                        <td class="text-nowrap" style="width: 8rem;">${allData.dob}</td>
+                                        <td class="text-nowrap" style="width: 8rem;">${allData.type}</td>
+                                        <td class="text-nowrap" style="width: 8rem;">${allData.mobile}</td>
+                                        <td class="text-nowrap" style="width: 8rem;">${allData.email}</td>
+                                        <td class="text-nowrap" style="width: 8rem;">${allData.password}</td>
+                                        <td class="text-nowrap" style="width: 8rem;">${allData.userType}</td>
+                                        <td class="text-nowrap" style="width: 8rem;">${allData.status}</td>
+                                        <td class="text-nowrap" style="width: 8rem;">
+                                        <i class="fa fa-trash del-user mx-3"></i>
+                                        <i class="fa fa-eye edit-user" data-bs-toggle="modal" data-bs-target="#myModal"></i>
+                                    </td>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                      
+                    </div>
+                  </div>
+               </div>
+           </div>
+        <!--end-->
+        
+    </div>
+</div>
+          
+        </div>
+     </div>
+
+
+
+<!--modal start-->
+<div class="modal user-profile-box" id="myModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Edit User</h3>
+                <button type="button" class="btn-close"  data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="profile-box mb-3">
+                            <div class="upload-box">
+                                <button class="btn"><i class="fa fa-add"></i></button>
+                                <input type="file" >
+                            </div>
+                            <br>
+                            <h3>Upload Profile</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                        <div class="date-box">
+                            <div class="icon-box">
+
+                            </div>
+                            <br>
+                            <h1>27</h1>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="col-8"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--modal end-->
+
+
+
+
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+    <!--sweetAlert2 end-->
+
+    <script src="../Dashboard/js/dashboard.js"></script>
+
+
+</body>
+</html>

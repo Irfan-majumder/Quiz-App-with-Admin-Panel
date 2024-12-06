@@ -1,0 +1,204 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.side-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: start; /* justify-content: center;align-items: flex-start;*/
+    align-items: center;
+    padding: 20px 0px;
+    flex-direction: column;
+    transition: 0.5s ease-in-out;
+    z-index: 1000;
+}
+
+.side-nav .profile-pic{
+
+    width: 100px;
+    height: 100px;
+    background-image: url(../images/profile-pic2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+
+
+}
+
+.side-nav ul{
+    width: 100%;
+    margin: 20px 0px 0px;
+    
+}
+
+.side-nav ul li{
+    border-radius: 20px !important;
+    margin: 15px 0px;
+    background-color: transparent !important;
+    font-size: 20px;
+    color: aliceblue;
+    transition: 0.2s ease-in-out;
+}
+
+.side-nav ul li:hover{
+    background-color: #af47d4 !important;
+    color: aliceblue;
+}
+
+.side-nav button{
+    position: absolute;
+    bottom: 35px;
+    width: 70%;
+    padding: 4px;
+    border-radius:30px;
+    background-color: #af47d4;
+    color: #faf4f4;
+    font-weight: bold;
+    font-size: 15px;
+    
+}
+/* end of side-nav */
+/* start of main-box */
+
+.main-box .list-group li{
+   /* z-index: -1;*/
+    border-radius: 0 !important;
+    background-color: #0000FF;
+    color: #faf4f4;
+    
+}
+
+.main-box .teacher-box .content-box{
+    width: 100%;
+    height: 150px;
+    /*background-color: #af47d4;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.main-box .teacher-box .content-box .number-box{
+    width: 120px;
+    height: 120px;
+    border: 5px solid rgb(47, 20, 120);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* end of main-box */
+
+/* start of modal */
+.user-profile-box .modal-header{
+    background-color: #f76ede;
+    color: #faf4f4;
+}
+
+.user-profile-box .profile-box{
+    width: 100%;
+    height: 300px;
+    background-color: #eee4ec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.user-profile-box .profile-box .upload-box{
+    width: 150px;
+    height: 150px;
+    background-image: url(../images/profile-pic2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+}
+
+.user-profile-box .profile-box .upload-box button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 20px;
+    
+}
+
+.user-profile-box .profile-box .upload-box input{
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 50px;
+    opacity: 0;
+}
+
+.user-profile-box .date-box{
+    width: 100%;
+    height: 150px;
+    background-color: #eee4ec;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.user-profile-box .date-box h1{
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.user-profile-box .date-box .icon-box{
+    width: 100%;
+    height: 40px;
+    background-color: orange;
+}
+/* end of modal */
+
+
+.visible-question i{
+    font-size: 20px;
+}
+
+.visible-question span{
+    font-size: 20px;
+}
+
+/* start of toggler-box */
+
+.toggler-box{
+    opacity: 0;
+    font-size: 30px;
+}
+
+.toggler-box .toggler-icon{
+    position: fixed;
+    padding: 15px;
+    top: 0px;
+    right: 0px;
+    z-index: 100;
+   
+    border-radius: 10px; 
+    
+}
+
+@media (max-width: 991px){
+    .side-nav{
+        transform: translateX(-100%);
+    }
+    .side-nav.active{
+        transform: translateX(0px);
+    }
+    .toggler-box{
+        opacity: 1;
+    }
+}
